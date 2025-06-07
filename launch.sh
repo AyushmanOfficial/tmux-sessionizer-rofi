@@ -26,14 +26,6 @@
 #                                                    
 
 ROOT_DIR="${HOME}/Documents/Dev/Projects"
-CONFIG_DIR="${XDG_CONFIG_HOME:-$ROOT_DIR/.config}/tmux-sessionizer"
-CONFIG_FILE="$CONFIG_DIR/tmux-sessionizer.conf"
-
-# Load config if exists
-if [[ -f "$CONFIG_FILE" ]]; then
-    # shellcheck source=/dev/null
-    source "$CONFIG_FILE"
-fi
 
 sanity_check() {
     command -v tmux >/dev/null 2>&1 || { echo "tmux not found. Install it first."; exit 1; }
